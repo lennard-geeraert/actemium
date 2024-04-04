@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="actemium" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+    <class>domein.Werknemer</class>
+       <class>domein.Klant</class>
+        <class>domein.Ticket</class>
+        <class>domein.ContactPersoon</class>
+          <class>domein.Gebruiker</class>
+                 <class>domein.Contract</class>
+                   <class>domein.Contracttype</class>
+    <properties>
+   
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1434;databaseName=ActemiumJava;integratedSecurity=true"/>
+      <property name="javax.persistence.jdbc.user" value=""/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+		<property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+    </properties>
+  </persistence-unit>
+</persistence>

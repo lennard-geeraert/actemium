@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#setButtonToevoegen" prefHeight="1100.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="82.0" onMouseClicked="#getSelectedRow" prefHeight="962.0" prefWidth="950.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="536.0" AnchorPane.topAnchor="200.0">
+        <columns>
+          <TableColumn fx:id="naamColumn" minWidth="0.0" prefWidth="67.0" text="Naam" />
+            <TableColumn fx:id="tijdstipColumn" prefWidth="67.0" text="Tijdstipmogelijkheden" />
+            <TableColumn fx:id="prijsColumn" prefWidth="67.0" text="Prijs" />
+            <TableColumn fx:id="isactiefColumn" prefWidth="67.0" text="Status" />
+            <TableColumn fx:id="contracttypeidColumn" prefWidth="75.0" text="Id" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <GridPane layoutX="1211.0" layoutY="20.0" prefHeight="1061.0" prefWidth="421.0" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.39990234375" minWidth="10.0" prefWidth="225.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.4000244140625" minWidth="10.0" prefWidth="196.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="162.80002441406248" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="162.80002441406248" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="162.80002441406248" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="162.80002441406248" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="120.80001220703127" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnContracttypeToevoegen" alignment="CENTER" mnemonicParsing="false" onAction="#btnContracttypeToevoegenAfhandeling" prefHeight="64.0" prefWidth="486.0" style="-fx-background-color: rgba(9,30,66,.95); -fx-background-radius: 30;" text="Contracttype toevoegen" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="15">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Label fx:id="labelContracttypeToevoegen" alignment="CENTER" prefHeight="35.0" prefWidth="466.0" text="Contracttype toevoegen" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="258.0" text="Naam *" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="263.0" text="Manier aanmaak ticket *" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="278.0" text="Tijdstippenmogelijkheid *" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="58.0" prefWidth="222.0" text="Maximale afhandeltijd *" GridPane.rowIndex="6">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="270.0" text="Minimale afhandeltijd *" GridPane.rowIndex="7">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNaam" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtMaxAfh" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ChoiceBox fx:id="choiceTijdsttip" prefHeight="26.0" prefWidth="220.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="choiceManier" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtMinAfh" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="270.0" text="Prijs contracttype *" GridPane.rowIndex="8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPrijs" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label fx:id="lblError" prefHeight="100.0" prefWidth="443.0" textFill="RED" GridPane.columnSpan="2147483647" GridPane.rowIndex="12" GridPane.rowSpan="2" />
+            <Label fx:id="lblContracttypeWijzigen" alignment="CENTER" prefHeight="35.0" prefWidth="438.0" text="Contracttype Wijzigen" visible="false" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnContracttypeWijzigen" alignment="CENTER" mnemonicParsing="false" onAction="#btnContracttypeWijzigenAfhandeling" prefHeight="64.0" prefWidth="446.0" style="-fx-background-color: rgba(9,30,66,.95); -fx-background-radius: 30;" text="Contracttype wijzigen" textFill="WHITE" visible="false" GridPane.columnSpan="2147483647" GridPane.rowIndex="14">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblStatusContracttype" alignment="CENTER" prefHeight="18.0" prefWidth="270.0" text="Status Contracttype" visible="false" GridPane.rowIndex="9">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choiceStatusContracttype" prefHeight="26.0" prefWidth="220.0" style="-fx-background-radius: 30;" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Button fx:id="btnContracttypeVerwijderen" mnemonicParsing="false" onAction="#btnContracttypeVerwijderenAfhandeling" prefHeight="62.0" prefWidth="428.0" style="-fx-background-color: darkred; -fx-background-radius: 30;" text="Contracttype verwijderen" textFill="WHITE" visible="false" GridPane.columnSpan="2" GridPane.rowIndex="16">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblLopendeContracten" prefHeight="18.0" prefWidth="302.0" text="Aantal lopende contracten" visible="false" GridPane.rowIndex="11">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLopendeContracten" style="-fx-background-radius: 30;" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label fx:id="lblBehandeldeTickets" text="Aantal Behandelde tickets" visible="false" GridPane.rowIndex="10">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBehandeldeTickets" style="-fx-background-radius: 30;" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="gradefilterPane" layoutX="20.0" layoutY="35.0" onMouseClicked="#setButtonToevoegen" prefHeight="103.0" prefWidth="950.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="89.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="148.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="0.0" prefWidth="22.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="115.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="148.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="0.0" prefWidth="22.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="65.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="106.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="364.0" minWidth="10.0" prefWidth="242.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Filtreer">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Status" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="isActiefInput" prefWidth="150.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

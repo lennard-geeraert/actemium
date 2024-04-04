@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="533.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <LineChart fx:id="linechart" layoutX="100.0" layoutY="67.0" title="Aantal Tickets per maand">
+        <xAxis>
+          <CategoryAxis fx:id="caMaanden" endMargin="0.0" side="BOTTOM" startMargin="0.0" tickLabelGap="1.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="naAantalTickets" minorTickCount="0" side="LEFT" upperBound="11.0" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
